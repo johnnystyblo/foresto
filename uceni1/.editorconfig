@@ -1,0 +1,4 @@
+﻿[*.{cs,vb}]
+
+# IDE0040: Přidat Modifikátory dostupnosti
+dotnet_style_require_accessibility_modifiers = never
