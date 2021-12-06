@@ -9097,28 +9097,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: postava_green
       objectReference: {fileID: 0}
-    - target: {fileID: 2391268062621488334, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
-      propertyPath: m_Size.x
-      value: 2.9992049
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391268062621488334, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.109725356
-      objectReference: {fileID: 0}
-    - target: {fileID: 8509963841189911940, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8509963841189911940, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
-      propertyPath: jumpForce
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 8509963841189911940, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
-      propertyPath: moveForce
-      value: 14
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6485678892454697914, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 347ea5b4872a6e24db0762d8e24c2b52, type: 3}
 --- !u!1 &1831171196
 GameObject:

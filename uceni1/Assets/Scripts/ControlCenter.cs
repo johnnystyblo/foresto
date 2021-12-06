@@ -9,6 +9,9 @@ public class ControlCenter : MonoBehaviour
 
     public int coinAmount;
     public int playerLives;
+    public GameObject baseballPrefab;
+    
+
     void Start()
     {
         if (PlayerPrefs.GetInt("PlayerLives") <= 0)
@@ -18,7 +21,8 @@ public class ControlCenter : MonoBehaviour
         }
         coinAmount = PlayerPrefs.GetInt("CoinAmount");
         playerLives = PlayerPrefs.GetInt("PlayerLives");
-
+        baseballPrefab.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -67,5 +71,13 @@ public class ControlCenter : MonoBehaviour
         PlayerPrefs.SetInt("CoinAmount", coinAmount);
         PlayerPrefs.SetInt("PlayerLives", playerLives);
         SceneManager.LoadScene("MainMenu");
+    }
+    public void WeaponStore()
+    {
+        if (PlayerPrefs.GetInt("CoinAmount") >= 5)
+        {
+            PlayerPrefs.SetInt("CoinAmount", coinAmount - 5);
+            baseballPrefab.SetActive(true);
+        }
     }
 }
