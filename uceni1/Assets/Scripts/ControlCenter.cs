@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControlCenter : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [HideInInspector]
     public int coinAmount;
+    [HideInInspector]
     public int playerLives;
+    public int isBaseballSold;
     public GameObject baseballPrefab;
+    public GameObject WeaponPrice;
+    [HideInInspector]
+    public Text coinText;
+    
     
 
     void Start()
@@ -21,14 +29,17 @@ public class ControlCenter : MonoBehaviour
         }
         coinAmount = PlayerPrefs.GetInt("CoinAmount");
         playerLives = PlayerPrefs.GetInt("PlayerLives");
-        baseballPrefab.SetActive(false);
-        
+        isBaseballSold = PlayerPrefs.GetInt("BaseballSold");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        coinText.text = coinAmount.ToString();
+        if (isBaseballSold == 1)
+        {
+            WeaponPrice.SetActive(false);
+        }
     }
     public void ResetIngame()
     {
@@ -74,10 +85,17 @@ public class ControlCenter : MonoBehaviour
     }
     public void WeaponStore()
     {
-        if (PlayerPrefs.GetInt("CoinAmount") >= 5)
+        if (coinAmount >= 5 && isBaseballSold == 0)
         {
-            PlayerPrefs.SetInt("CoinAmount", coinAmount - 5);
+            coinAmount -= 5;
             baseballPrefab.SetActive(true);
+            coinText.text = PlayerPrefs.GetInt("CoinAmount").ToString();
+            PlayerPrefs.SetInt("BaseballSold", 1);
+            WeaponPrice.SetActive(false);
+            
+
+
         }
+
     }
 }

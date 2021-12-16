@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour
 
         if (blobs.Length == 0 & reds.Length == 0)
         {
-            SceneManager.LoadScene("Store");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }

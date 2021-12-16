@@ -15,14 +15,12 @@ public class EnemyScript : MonoBehaviour
     AudioSource zvuk;
     private string PLATFORM_TAG = "Platform";
     private string GROUND_TAG = "Ground";
-    private float dirX;
+    private float dirX = 1f;
     [HideInInspector]
-    public float speed;
+    public float speed = 5f;
 
     void Awake()
     {
-        speed = 5f;
-        dirX = 1f;
         myBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         zvuk = GetComponent<AudioSource>();
@@ -90,7 +88,7 @@ public class EnemyScript : MonoBehaviour
         {
             speed = 2.5f;
         }
-        if (collision.gameObject.CompareTag(GROUND_TAG))
+        else if (collision.gameObject.CompareTag(GROUND_TAG))
         {
             speed = 5f;
         }

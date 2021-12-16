@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded = true;
     private string GROUND_TAG = "Ground";
     public float speed = 5f;
+    public int playerLives;
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerLives = PlayerPrefs.GetInt("PlayerLives");
     }
 
     // Update is called once per frame

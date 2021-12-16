@@ -200,7 +200,6 @@ MonoBehaviour:
   firePoint: {fileID: 1977606460}
   bulletPrefab: {fileID: 4374153314475896274, guid: bc57f9a3a1e9baf419226d5f854d2d36, type: 3}
   speed: 0
-  enemyValue: 1
 --- !u!82 &7976975751779727320
 AudioSource:
   m_ObjectHideFlags: 0
@@ -211,7 +210,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 46bbf4099bfddc645a4cc40d53ad49d1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2203a4868956f7a47b70fb27c62bbfe7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1

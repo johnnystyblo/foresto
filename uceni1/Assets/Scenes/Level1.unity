@@ -2481,6 +2481,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinAmount: 0
   playerLives: 0
+  isBaseballSold: 0
+  baseballPrefab: {fileID: 0}
+  WeaponPrice: {fileID: 0}
+  coinText: {fileID: 0}
 --- !u!82 &519420035
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5907,7 +5911,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &1274980255
 RectTransform:
